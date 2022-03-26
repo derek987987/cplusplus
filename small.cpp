@@ -13,6 +13,14 @@ int main(){
     if(name == "Kate"){
         greeting += ", I know you!";
     }
-    cout << greeting << "\r\n";
+    cout << greeting << '\n';
+
+    int length = greeting.length();
+    cout << "\"" + greeting + "\" is " << length << " characters long" << '\n';
+    string beginning = greeting.substr(greeting.find(' ') + 1);
+    cout << beginning << "\n";
+    if(beginning == name){
+        cout << "expected results" << '\n';
+    }
     return 0;
 }
