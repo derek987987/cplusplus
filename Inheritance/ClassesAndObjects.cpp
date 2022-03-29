@@ -1,6 +1,7 @@
 //Defines the entry point for the console application
 
 #include "Tweeter.h"
+#include "status.h"
 #include <iostream>
 
 using std::cout;
@@ -15,6 +16,14 @@ int main(){
     }
     cout << "After innermost block" << endl;
     string name = p1.getName();
+
+    Status s = Pending;
+    s = Approved;
+
+    FileError fe = FileError::notfound;
+    fe = FileError::ok;
+    NetworkError ne = NetworkError::disconnected;
+    ne = NetworkError::ok;
 
     return 0;
 }
