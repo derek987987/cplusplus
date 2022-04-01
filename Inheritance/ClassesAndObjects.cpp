@@ -15,7 +15,10 @@ int main(){
         std::string name2 = t1.getName();
     }
     cout << "After innermost block" << endl;
-    string name = p1.getName();
+
+    cout << "p1: " << p1.getName() << " " << p1.getNumber() << endl;
+    p1.SetNumber(100);
+    cout << "p1: " << p1.getName() << " " << p1.getNumber() << endl;
 
     Status s = Pending;
     s = Approved;
