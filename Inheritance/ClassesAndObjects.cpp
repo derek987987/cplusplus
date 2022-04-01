@@ -10,23 +10,24 @@ using std::string;
 
 int main(){
     Person p1("Kate", "Gregory",123);
-    {
-        Tweeter t1("Someone", "Else", 456, "@whoever");
-        std::string name2 = t1.getName();
+    Person p2("Someone", "else", 456);
+
+    cout << "p1 is ";
+    if(!(p1 < p2)){
+        cout << "not ";
     }
-    cout << "After innermost block" << endl;
+    cout << "less than p2" << endl;
 
-    cout << "p1: " << p1.getName() << " " << p1.getNumber() << endl;
-    p1.SetNumber(100);
-    cout << "p1: " << p1.getName() << " " << p1.getNumber() << endl;
+    cout << "p1 is ";
+    if(!(p1 < 300)){
+        cout << "not ";
+    }
+    cout << "less than 300" << endl;
 
-    Status s = Pending;
-    s = Approved;
-
-    FileError fe = FileError::notfound;
-    fe = FileError::ok;
-    NetworkError ne = NetworkError::disconnected;
-    ne = NetworkError::ok;
-
+    cout << "300 is ";
+    if(!(300 < p1)){
+        cout << "not ";
+    }
+    cout << "less than p1" << endl;
     return 0;
 }
